@@ -5,16 +5,22 @@ Aplikacja do analizy i wizualizacji 3D dynamicznego routingu w sieciach satelit�
 ## Główne funkcjonalności aplikacji
 
 * **Pobieranie danych w czasie rzeczywistym**
+  
   Aplikacja pobiera aktualne dane TLE satelitów Starlink z bazy Celestrak przy użyciu biblioteki `skyfield`.
 * **Budowa grafu widoczności**
+  
   Dynamiczne tworzenie węzłów i krawędzi z uwzględnieniem krzywizny Ziemi oraz maksymalnych zasięgów (1200 km dla połączeń Ziemia-Kosmos i 2500 km dla Kosmos-Kosmos).
 * **Optymalizacja trasy**
+  
   Implementacja algorytmu Dijkstry z wykorzystaniem kopca (`heapq`) do znalezienia najkrótszej ścieżki (najmniejszego opóźnienia) między miastami.
 * **Szacowanie parametrów łącza**
+  
   Obliczanie opóźnienia RTT oraz estymacja realnej przepustowości TCP dla pobierania i wysyłania danych.
 * **Wizualizacja 3D**
+  
   Generowanie interaktywnej Ziemi z wyznaczoną trasą przy użyciu biblioteki `plotly`.
 * **Analiza wydajności**
+  
   Moduł testujący czas wykonania algorytmu oraz opóźnienia w zależności od wielkości sieci (ilości satelitów), generujący wykresy w `matplotlib`.
 
 ## Użyte biblioteki
