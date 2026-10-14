@@ -1,2 +1,26 @@
-# LEO-Satellite-Routing
-Wyznaczanie najkrótszych ścieżek telekomunikacyjnych w sieci Starlink. Projekt łączący algorytmy grafowe z przestrzenną analizą danych satelitarnych..
+# Symulator Routingu Satelitarnego LEO (dla konstelacji Starlink)
+
+Aplikacja do analizy i wizualizacji 3D dynamicznego routingu w sieciach satelitów na niskiej orbicie Ziemi. Projekt symuluje przesyłanie danych między ziemskimi stacjami bazowymi z wykorzystaniem satelitów konstelacji Starlink, wyszukując najkrótszą ścieżkę komunikacyjną.
+
+## Główne funkcjonalności aplikacji
+
+* **Pobieranie danych w czasie rzeczywistym**
+* Aplikacja pobiera aktualne dane TLE satelitów Starlink z bazy Celestrak przy użyciu biblioteki `skyfield`.
+* **Budowa grafu widoczności**
+* Dynamiczne tworzenie węzłów i krawędzi z uwzględnieniem krzywizny Ziemi oraz maksymalnych zasięgów (1200 km dla połączeń Ziemia-Kosmos i 2500 km dla Kosmos-Kosmos).
+* **Optymalizacja trasy**
+* Implementacja algorytmu Dijkstry z wykorzystaniem kopca (`heapq`) do znalezienia najkrótszej ścieżki (najmniejszego opóźnienia) między miastami.
+* **Szacowanie parametrów łącza**
+* Obliczanie opóźnienia RTT oraz estymacja realnej przepustowości TCP dla pobierania i wysyłania danych.
+* **Wizualizacja 3D**
+* Generowanie interaktywnego globusa z wyznaczoną trasą przy użyciu biblioteki `plotly`.
+* **Analiza wydajności**
+* Moduł testujący czas wykonania algorytmu oraz opóźnienia w zależności od wielkości sieci (ilości satelitów), generujący wykresy w `matplotlib`.
+
+## Użyte biblioteki
+
+* **Język:** Python
+* **GUI:** Tkinter
+* **Obliczenia przestrzenne i astronomiczne:** `skyfield`, `numpy`
+* **Wizualizacja:** `plotly`, `matplotlib`
+* **Algorytmy:** `heapq`
