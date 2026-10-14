@@ -2,6 +2,8 @@
 
 Aplikacja do analizy i wizualizacji 3D dynamicznego routingu w sieciach satelitów na niskiej orbicie Ziemi. Projekt symuluje przesyłanie danych między ziemskimi stacjami bazowymi z wykorzystaniem satelitów konstelacji Starlink, wyszukując najkrótszą ścieżkę komunikacyjną.
 
+Ważnym elementem, jest to, że aplikacja jest projektem na studia, z takiego powodu zostały użyte inne algorytmy niż te, które powinny zostać użyte (np. K-Tree). Natomiast całe algorytmy były tworzone i analizowane pod wodzą **prowadzącego** zajęcia, przez co zaprogramowane algorytmy są w **100%** działające. 
+
 ## Główne funkcjonalności aplikacji
 
 * **Pobieranie danych w czasie rzeczywistym**
@@ -33,7 +35,7 @@ Aplikacja do analizy i wizualizacji 3D dynamicznego routingu w sieciach satelit�
 
 ## Użycie i instalacja
 
-* Dla otwarcia pobranego folderu zalecam użycie środowiska PyCharm.
+* Dla otwarcia pobranego folderu zalecam użycie środowiska **PyCharm**.
 
 * Po uruchomieniu panelu wybierz z list rozwijanych miasto początkowe oraz miasto docelowe (np. Poznań -> Nowy Jork)
 * Określ liczbę satelitów (od 20 do 8000), które mają zostać uwzględnione w routingu
